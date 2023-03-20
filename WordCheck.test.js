@@ -17,7 +17,7 @@ describe("wordCheck()", () => {
   });
 
   /*
-    Ensures that a letter found and is in the correct position in the correct word is marked as correct.
+    Ensures that a letter found and is at the correct position in the correct word is marked as correct.
   */
   test("Should match object with key 'D' and value 'correct' for the last letter", () => {
     const result = wordCheck("words", "lords");
@@ -40,5 +40,14 @@ describe("wordCheck()", () => {
     const result = wordCheck("HALLÅ", "CYKLA");
     expect(result[2]).toMatchObject({ L: "incorrect" });
   });
+
+  /*
+    Ensures that a letter found in the correct word is marked as incorrect when
+    the same letter was found earlier but at the wrong position (avoiding duplicate findings).
+  */
+    test("Should match object with key 'L' and value 'incorrect' for the third letter", () => {
+      const result = wordCheck("hålla", "lista");
+      expect(result[3]).toMatchObject({ L: "incorrect" });
+    });
 
 });

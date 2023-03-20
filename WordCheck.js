@@ -16,6 +16,8 @@ export default function wordCheck(inputWord, correctWord){
         }
     });
 
+    console.log(correctWord)
+
     // Find misplaced letters and mark them as 'found'
     // to ensure they won't be counted more than once.
     // Mark all other letters as incorrect.
@@ -32,8 +34,13 @@ export default function wordCheck(inputWord, correctWord){
             const letterAndValue = {};
             letterAndValue[currentLetter.toUpperCase()] = "incorrect";
             checkedLetters[index] = letterAndValue;
+            inputWord[index] = null;
+            correctWord[index] = null;
         }
     });
     
     return checkedLetters;
 }
+
+const t = wordCheck("hllall", "mlelsl")
+console.log(t)
