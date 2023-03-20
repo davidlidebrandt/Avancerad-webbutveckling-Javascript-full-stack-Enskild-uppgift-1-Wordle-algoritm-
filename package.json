@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "WordCheck.js",
+  "type": "module",
+  "dependencies": {
+    "jest": "^29.5.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "scripts": {
+    "start": "node WordCheck.js",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidlidebrandt/Avancerad-webbutveckling-Javascript-full-stack-Enskild-uppgift-1-Wordle-algoritm-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidlidebrandt/Avancerad-webbutveckling-Javascript-full-stack-Enskild-uppgift-1-Wordle-algoritm-/issues"
+  },
+  "homepage": "https://github.com/davidlidebrandt/Avancerad-webbutveckling-Javascript-full-stack-Enskild-uppgift-1-Wordle-algoritm-#readme"
+}
