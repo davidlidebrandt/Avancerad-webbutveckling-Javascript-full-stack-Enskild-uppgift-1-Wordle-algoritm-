@@ -41,6 +41,3 @@ export default function wordCheck(inputWord, correctWord){
     
     return checkedLetters;
 }
-
-const t = wordCheck("hllall", "mlelsl")
-console.log(t)
